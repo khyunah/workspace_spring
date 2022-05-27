@@ -31,7 +31,7 @@ public class ApiController {
 	// get 방식 일때 URI방식 사용 ( 데이터를 담아서 요청할 수 있음 ) ㅡ> 처리하고 응답을 해줄수 있다.
 	// http://localhost:9090/api/get/path-variable/[xxx]
 	// 주소 체계에서는 언더바_ 말고 하이픈- 많이 씀 
-	@GetMapping(path = "/path-variable/{name}")
+	@GetMapping(path = "/path-variable/{name}")	// {name} : 템플릿 변수 
 	public String queryParam(@PathVariable(name = "name") String name) {
 
 		System.out.println("브라우저에서 들어온 값을 받음." + name);
@@ -51,14 +51,14 @@ public class ApiController {
 	// 문제 1. 새로운 주소 만들어서 요청 응답 ( 인자값 하나 )
 	// 문제 2. 새로운 주소 만들어서 요청 응답 ( 인자값 두개 )
 	
-	// http://localhost:9090/api/get/book/path-variable/[xxx]/
-	@GetMapping(path = "book/path-variable/{booktitle}")
+	// http://localhost:9090/api/get/book/[xxx]/
+	@GetMapping(path = "book/{booktitle}")
 	public String queryParam3(@PathVariable(name = "booktitle") String booktitle) {
 		return "booktitle : " + booktitle;
 	}
 	
-	// http://localhost:9090/api/get/login/path-variable/[xxx]/[xxx]
-	@GetMapping(path = "select/path-variable/{name}/{grade}")
+	// http://localhost:9090/api/get/select/student/[xxx]/[xxx]
+	@GetMapping(path = "select/student/{name}/{grade}")
 	public String queryParam4(@PathVariable(name = "name") String name,
 			@PathVariable(name = "grade") int grade) {
 		return "name : " + name + ", grade : " + grade;
