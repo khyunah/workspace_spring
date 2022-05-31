@@ -5,11 +5,13 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.PropertyNamingStrategies;
+import com.fasterxml.jackson.databind.annotation.JsonNaming;
 
+@JsonNaming(value = PropertyNamingStrategies.SnakeCaseStrategy.class)
 public class Student {
 	
-	@JsonProperty("student_number")
+	// @JsonProperty("student_number")
 	private int studentNumber;
 	
 	@NotBlank(message = "이름을 입력하세요.")
