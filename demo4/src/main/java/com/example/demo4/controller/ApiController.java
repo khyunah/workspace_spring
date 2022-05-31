@@ -33,8 +33,10 @@ public class ApiController {
 		return user;
 	}
 
+	// 202, 200 번 응답을 돌려줄때 응답코드를 지정해서 보낼수 있다. 
 	@PutMapping("/put")
 	public ResponseEntity<User> put(@RequestBody User user) {
+		// ResponseEntity를 통해서 status, header 등을 설정할 수 있다. 
 		return ResponseEntity.status(HttpStatus.CREATED).body(user);
 	}
 }
