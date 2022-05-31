@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/kimhyunah1")
+@RequestMapping("/kimhyunah")
 public class DeleteApiController {
 	
 	// put 방식에서 사용하던 @RequestBody 랑 헷갈리지 말기 ( @RequestParam )
