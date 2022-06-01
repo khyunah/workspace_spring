@@ -19,6 +19,6 @@ public class TestController {
 	public User user() {
 		User user = new User();
 		user.setName("홍길동");
-		return user;
+		return user; 
 	}
 }
