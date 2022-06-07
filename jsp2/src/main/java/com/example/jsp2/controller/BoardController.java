@@ -21,4 +21,24 @@ public class BoardController {
 	public String example1() {
 		return "example1";
 	}
+	
+	@GetMapping("/example2")
+	public String example2() {
+		return "example2";
+	}
+	
+	@GetMapping("/if")
+	public String if2() {
+		return "if";
+	}
+	
+	@GetMapping("/while")
+	public String while2() {
+		return "while";
+	}
+	
+	@GetMapping("/for")
+	public String for2() {
+		return "for";
+	}
 }
