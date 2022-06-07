@@ -41,4 +41,9 @@ public class BoardController {
 	public String for2() {
 		return "for";
 	}
+	
+	@GetMapping("/round")
+	public String round() {
+		return "round";
+	}
 }
