@@ -17,6 +17,11 @@ public class BoardController {
 		return "index";
 	}
 	
+	@GetMapping("/index1")
+	public String index1() {
+		return "index1";
+	}
+	
 	@GetMapping("/example1")
 	public String example1() {
 		return "example1";
