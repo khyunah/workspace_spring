@@ -24,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 // 로깅 처리를 많이 한다. 
 // url 확인이나 특정 코드를 집어넣어야 할때 사용을 많이 한다. 
 @Slf4j
-//@Component // new해서 메모리에 올려달라라는 어노테이션
+@Component // new해서 메모리에 올려달라라는 어노테이션
 @WebFilter(urlPatterns = "/api/*") // /api에 대한 요청만 (FilterExAplication에 어노테이션 달아줘야함)
 public class GlobalFilter implements Filter {
 
